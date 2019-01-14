@@ -53,6 +53,7 @@ export const EuiButtonGroup = ({
             isSelected={isSelectedState}
             key={index}
             label={option.label}
+            aria-label={option['aria-label']}
             name={name}
             onChange={onChange.bind(null, option.id, option.value)}
             size={buttonSize}
@@ -71,6 +72,7 @@ EuiButtonGroup.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
+      'aria-label': PropTypes.string,
       isDisabled: PropTypes.bool,
     }),
   ).isRequired,
